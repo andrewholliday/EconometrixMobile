@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>5a870344-508f-42d7-9e40-45b61b2a21b1</ProjectGuid>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".abignore" />
+    <Content Include=".abproject" />
+    <Content Include=".debug.abproject" />
+    <Content Include=".release.abproject" />
+    <Content Include="AppSettings.debug.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AppSettings.release.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\Apple Development IOS Push Services.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\Econometrix_with_Push.mobileprovision">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\Ecx_developement_7_23_2015.mobileprovision">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\ecx_ios_development_7_23_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\iPhone Developer Gregory_Development%288KF5W3S3UB%29_7_23_205.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\GreggoryDunnion\Jolene_7_23_2015.csr">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\Manpower\Development.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\Manpower\Development.csr">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\Manpower\Econometrix_Developement_Provision.mobileprovision">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Development\Manpower\iPhone Developer Joseph Holliday %28ME547B293T%29.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\APNS IOS Push Services com.econometrix.mobile.application.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\ecx_apns_production_9_25_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\ecx_distribution_7_23_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\ECX_Production_7_23_2015mobileprovision.mobileprovision">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\ecx_push_9_25_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\iPhone Distribution Gregory Dunnion %28WN7LQ95RE4%29.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\GreggoryDunnion\Jolene_Production_7_23_2015.csr">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\Manpower9_15_2015.mobileprovision">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerAPNS9_16_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerAPNSDistribution.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerAPNSDistribution9_16_2015.csr">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerDistribution.p12">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerDistribution9_15_2015.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certs\Production\Manpower\ManpowerDistribution9_16_2015.csr">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cordova.android.js" />
+    <Content Include="cordova.ios.js" />
+    <Content Include="cordova.wp8.js" />
+    <Content Include="Econometrix.Mobile.Application.iceproj">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Econometrix.Mobile.Application.iceproj.DotSettings.user">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Econometrix.Mobile.Application.iceproj.user">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Econometrix.Mobile.Application.iceproj.vspscc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="scripts\BootstrapConfig.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\BootstrapConfig.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\jquery.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\jquery.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\kendo.mobile.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\kendo.mobile.min.js.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.min.js.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.vanilla.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.vanilla.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\raygun.vanilla.min.js.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\js\requirejs.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\typescript\jquery.d.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\typescript\kendo.mobile.d.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\libs\typescript\require.d.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\ActionResult.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\ActionResult.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Authentication.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Authentication.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Instance.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Instance.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\JobCandidateHireInformation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\JobCandidateHireInformation.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\JobCandidateInterviewInformation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\JobCandidateInterviewInformation.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\PushNotificationAction.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\PushNotificationAction.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Resource.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Resource.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Role.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Role.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\SystemProperty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\SystemProperty.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Tab.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\Tab.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\TimeZone.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\TimeZone.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\UpdateTimeZoneResult.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\UpdateTimeZoneResult.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\User.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\User.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\View.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\models\View.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ApprovalSummary.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ApprovalSummary.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ChangeRequestApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ChangeRequestApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ExtensionApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ExtensionApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\FeeApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\FeeApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\InvoiceApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\InvoiceApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\JobApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\JobApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ServiceOrderApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ServiceOrderApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ServiceRequestApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\ServiceRequestApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\TimeSheetApprovalDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Approvals\TimeSheetApprovalDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateHire.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateHire.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateInterview.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateInterview.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateReject.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateReject.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateSummary.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Candidates\CandidateSummary.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Errors\NoRoleError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Errors\NoRoleError.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\InitContent\InitContent.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\InitContent\InitContent.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Interfaces\IViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Interfaces\IViewModel.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobCandidateDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobCandidateDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobOpenDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobOpenDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobSummary.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Jobs\JobSummary.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\ExpiredPassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\ExpiredPassword.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\ForgotPassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\ForgotPassword.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\Login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Login\Login.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Splash\Splash.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Splash\Splash.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\ChangePassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\ChangePassword.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\UpdateTimeZone.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\UpdateTimeZone.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\UserSettings.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\UserSettings\UserSettings.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\ViewModelBase.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\ViewModelBase.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\ViewModelDetailBase.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\ViewModelDetailBase.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Workers\WorkerDetail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Workers\WorkerDetail.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Workers\WorkerSummary.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\viewModels\Workers\WorkerSummary.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\appbuilder.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\appbuilder2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\back.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\kendoui.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\kendoui.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\kendoui.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\location.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\location2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\location_active.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\location_active2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\logo2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\search2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\search_active.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\search_active2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\sprite-weather.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\sprite-weather2x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\wp8_icons.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\images\wp8_inverseicons.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\kendo.mobile.all.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\main.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\approvalSummary.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\changeRequestApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\extensionApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\feeApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\invoiceApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\jobApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\serviceOrderApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\serviceRequestApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Approval\timeSheetApprovalDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\candidateDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\candidateHire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\candidateInterview.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\candidateReject.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\candidateSummary.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\Hire\hireStepOne.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Candidate\Hire\hireStepTwo.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Error\GenericError.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Error\noRoleError.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\InitContent\InitContent.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Job\jobCandidateDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Job\jobDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Job\jobOpenDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Job\jobSummary.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Login\expiredPassword.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Login\forgotPassword.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Login\login.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Splash\splash.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\UserSettings\changePassword.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\UserSettings\updateTimeZone.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\UserSettings\UserSettings.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Worker\workerDetail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Worker\workerSummary.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-667h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape-736h.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait@2x.png" />
+    <Resource Include="App_Resources\iOS\Default.png" />
+    <Resource Include="App_Resources\iOS\Default@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-40.png" />
+    <Resource Include="App_Resources\iOS\icon-40@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-40@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-60.png" />
+    <Resource Include="App_Resources\iOS\icon-60@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-60@3x.png" />
+    <Resource Include="App_Resources\iOS\icon-72.png" />
+    <Resource Include="App_Resources\iOS\icon-72@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-76.png" />
+    <Resource Include="App_Resources\iOS\icon-76@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small@2x.png" />
+    <Resource Include="App_Resources\iOS\icon.png" />
+    <Resource Include="App_Resources\iOS\icon@2x.png" />
+    <Resource Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Resource Include="App_Resources\WP8\Assets\BadgeLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\Logo.png" />
+    <Resource Include="App_Resources\WP8\Assets\SplashScreen.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile150x150.png" />
+    <Resource Include="App_Resources\WP8\Assets\SquareTile71x71.png" />
+    <Resource Include="App_Resources\WP8\Assets\StoreLogo.png" />
+    <Resource Include="App_Resources\WP8\Assets\WideLogo.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="css\index.css" />
+    <Content Include="img\cordova.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="scripts\app\AdManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\AdManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\AnalyticsManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\AnalyticsManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\App.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\App.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\Configuration.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\Configuration.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\ErrorPublisher.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\ErrorPublisher.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\PushNotificationActionManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\PushNotificationActionManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\PushNotificationListner.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\PushNotificationListner.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\Session.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\Session.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\SessionManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\SessionManager.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\base\ClassBase.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\base\ClassBase.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\controllers\AuthenticationController.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\controllers\AuthenticationController.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ACTION.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ACTION.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ENTITYTYPE.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ENTITYTYPE.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\RESOURCE.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\RESOURCE.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ROLE.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\ROLE.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\STATUS.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\STATUS.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\STATUSFILTER.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\STATUSFILTER.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\TAB.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\TAB.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\TRANSITION.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\enums\TRANSITION.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\extentions\MVVMBindExtentions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\extentions\MVVMBindExtentions.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Approvals\ApprovalGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Approvals\ApprovalGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Authentication\AuthenticationGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Authentication\AuthenticationGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Candidates\CandidateGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Candidates\CandidateGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Configuration\ConfigurationGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Configuration\ConfigurationGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Gateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Gateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Jobs\JobGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Jobs\JobGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\MockJsonData\MockJobDetailData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\MockJsonData\MockJobSummaryData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\RequestEvents.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\RequestEvents.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Workers\WorkerGateway.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\gateways\Workers\WorkerGateway.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ConnectionHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ConnectionHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\DateExtensions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\DateExtensions.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\NavigationHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\NavigationHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\RequestCallbackHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\RequestCallbackHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ResourceHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ResourceHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\RoleHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\RoleHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\SimulatorHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\SimulatorHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\StringExtensions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\StringExtensions.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ViewHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\helpers\ViewHelper.ts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\index.js" />
+    <TypeScriptCompile Include="scripts\index.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\cordova.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\simulator.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\BatteryStatus.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Camera.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Contacts.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Device.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceMotion.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\DeviceOrientation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Dialogs.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileSystem.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\FileTransfer.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Globalization.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\InAppBrowser.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Media.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\MediaCapture.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\NetworkInformation.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Push.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Splashscreen.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\Vibration.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\cordova\plugins\WebSQL.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Assets\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="certs\" />
+    <Folder Include="certs\Development\" />
+    <Folder Include="certs\Development\GreggoryDunnion\" />
+    <Folder Include="certs\Development\Manpower\" />
+    <Folder Include="certs\Production\" />
+    <Folder Include="certs\Production\GreggoryDunnion\" />
+    <Folder Include="certs\Production\Manpower\" />
+    <Folder Include="css\" />
+    <Folder Include="img\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\app\" />
+    <Folder Include="scripts\base\" />
+    <Folder Include="scripts\controllers\" />
+    <Folder Include="scripts\enums\" />
+    <Folder Include="scripts\extentions\" />
+    <Folder Include="scripts\gateways\" />
+    <Folder Include="scripts\gateways\Approvals\" />
+    <Folder Include="scripts\gateways\Authentication\" />
+    <Folder Include="scripts\gateways\Candidates\" />
+    <Folder Include="scripts\gateways\Configuration\" />
+    <Folder Include="scripts\gateways\Jobs\" />
+    <Folder Include="scripts\gateways\MockJsonData\" />
+    <Folder Include="scripts\gateways\Workers\" />
+    <Folder Include="scripts\helpers\" />
+    <Folder Include="scripts\libs\" />
+    <Folder Include="scripts\libs\js\" />
+    <Folder Include="scripts\libs\typescript\" />
+    <Folder Include="scripts\models\" />
+    <Folder Include="scripts\typings\" />
+    <Folder Include="scripts\typings\cordova\" />
+    <Folder Include="scripts\typings\cordova\plugins\" />
+    <Folder Include="scripts\viewModels\" />
+    <Folder Include="scripts\viewModels\Approvals\" />
+    <Folder Include="scripts\viewModels\Candidates\" />
+    <Folder Include="scripts\viewModels\Errors\" />
+    <Folder Include="scripts\viewModels\InitContent\" />
+    <Folder Include="scripts\viewModels\Interfaces\" />
+    <Folder Include="scripts\viewModels\Jobs\" />
+    <Folder Include="scripts\viewModels\Login\" />
+    <Folder Include="scripts\viewModels\Splash\" />
+    <Folder Include="scripts\viewModels\UserSettings\" />
+    <Folder Include="scripts\viewModels\Workers\" />
+    <Folder Include="styles\" />
+    <Folder Include="styles\images\" />
+    <Folder Include="views\" />
+    <Folder Include="views\Admin\" />
+    <Folder Include="views\Approval\" />
+    <Folder Include="views\Candidate\" />
+    <Folder Include="views\Candidate\Hire\" />
+    <Folder Include="views\Error\" />
+    <Folder Include="views\InitContent\" />
+    <Folder Include="views\Job\" />
+    <Folder Include="views\Login\" />
+    <Folder Include="views\Splash\" />
+    <Folder Include="views\UserSettings\" />
+    <Folder Include="views\Worker\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(IceniumTargets)Build.targets" />
+  <!--
+    TODO: Uncomment this code if you need to customize the build process.
+    <Target Name="BeforeBuild">
+        <Message Text="TODO: Implement BeforeBuild" Importance="high" />
+    </Target>
+
+    <Target Name="AfterBuild">
+        <Message Text="TODO: Implement AfterBuild" Importance="high" />
+    </Target>
+    -->
+</Project>

@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no">
+        <!--<link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.common.min.css">
+        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.rtl.min.css">
+        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.default.min.css">
+        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.min.css">
+        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.default.min.css">-->
+
+
+        <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>
+        <script src="Plugins/google-analytics-plugin/www/analytics.js"></script>
+        <!--<script src="Plugins/cordova-admob-pro-master/www/AdMob.js"></script>-->
+        
+
+        <script src="scripts/libs/js/raygun.min.js"></script>
+        <!--<script src="scripts/libs/js/jquery.min.js"></script>test-->
+        <!--<script src="scripts/libs/js/kendo.mobile.min.js"></script>-->
+        <!--<script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>-->
+        
+
+        <script src="scripts/libs/js/requirejs.min.js" data-main="scripts/BootstrapConfig"></script>
+
+    </head>
+
+   
+    <body>
+
+        
+     <!-- main layout for application, like a materpage-->
+        <div data-role="layout" data-id="main" >
+            <div data-role="header">
+                <div class="ecx-headerInstance" >
+                    
+                    <span id ="headerCustomerInstanceName" style="padding-left:5px; font-size: 13px;"> </span>
+                    <!--<span id="headerUserName" style="float: right;padding-left:5px; font-size: 13px;"></span>-->
+                </div>
+                <div  data-role="navbar" id="mainNavBar">
+                    
+                    <div>
+                        <a data-role="button" id ="btnUserSettings" class="ecx-drawerbutton"  style="float: left;margin-top: 0px;" data-align="left" data-icon="drawer-button" data-transition="slide:right"></a>
+                        <span data-role="view-title" style="font-size: 18px;"></span>
+                    </div>
+                    <div style="padding-left:5px; font-size: 15px;line-height:120%">
+                        <span id="detailHeaderTitle"></span>
+                    </div>
+                </div>
+               
+            </div>
+
+            <!-- application views will be rendered here -->
+            <div data-role="footer" data-model="APP.models.contacts">
+                <div data-role="tabstrip" id="custom-tabstrip" data-selected-index="1">
+                    <a id="tabApproval" href="views/Approval/approvalSummary.html" data-icon="check-e">Approvals</a>
+                    <a id="tabCandidate" href="views/Candidate/candidateSummary.html" data-icon="worker-e">Candidates</a>
+                    <a id="tabJob" href="views/Job/jobSummary.html" data-icon="job-e">Jobs</a>
+                    <a id="tabWorker"  href="views/Worker/workerSummary.html" data-icon="contacts">Workers</a>
+                </div>
+            </div>
+        </div>
+        <!-- end main layout------------------------------------------>
+
+        <!-- admin layout for application, like a materpage-->
+        <div data-role="layout" data-id="layoutAdmin">
+            <div data-role="header" id="adminNavBar">
+                <div class="ecx-headerInstance">
+                    <span id="userSettingsHeaderCustomerInstanceName" style="padding-left:5px; font-size: 13px;"> </span>                    
+                </div>
+                <div data-role="navbar">
+                    <a data-role="button" id="userSettingBack" class="ecx-drawerbutton"  style="margin-top: 0px;margin-bottom: 5px" data-align="right" data-icon="drawer-button" data-transition="slide:left"></a>
+                   
+                    <span data-role="view-title"></span>
+                </div>
+            </div>          
+        </div>
+        <!-- end admin layout ------------------------------------------>
+        
+        <!-- password layout for application, like a materpage-->
+        <div data-role="layout" data-id="layoutPassword">
+            <div data-role="header" id="adminNavBar">
+                <div data-role="navbar">
+                    <!--href="#:back"-->
+                    <span data-role="view-title"></span>
+                </div>
+            </div>
+        </div>
+        <!-- end admin layout ------------------------------------------>
+
+        <!-- login layout for application, like a materpage-->
+        <div data-role="layout" data-id="loginLayout" >
+            <div data-role="header" id="loginNavBar"> 
+                <div data-role="navbar" style="border:0px;" >
+                    <img id ="loginLogo" src="img/logo-ecxconnect-large.png" style="width: 90%; padding-top:6%"  />
+                  
+                </div>
+            </div>           
+            <div data-role="footer" class="ecxFooter">
+                <span class="ecxCopyright"></span>
+                <br />
+                <span class="ecxVersion"></span>
+            </div>
+        </div>
+        <!-- end login layout ------------------------------------------>
+        <!-- splash layout for application, like a materpage-->
+        <div data-role="layout" data-id="splashLayout" style="background-color:white">
+            <div data-role="header" id="splashNavBar">
+                <div data-role="navbar" style="border:0px;">
+
+                </div>
+            </div>
+            <div data-role="footer" class="ecxFooter">
+                <span class="ecxCopyright"></span>
+                <br />
+                <span class="ecxVersion"></span>
+            </div>
+        </div>
+        <!-- end login layout ------------------------------------------>
+        
+        
+        <!-- modal views  ------------------------------------------>
+                <!-- error views  ------------------------------------------>       
+                <div id="error-view" data-role="modalview" data-modal="false" 
+                     style="display: none;" class="ecxModalView">
+                    <div class="error-header ecxHeader" data-role="header" style="display: none;">
+                        <div>
+                  
+                        </div>
+                    </div>
+          
+                    <div >
+                        <div data-align="center" class="message"></div>
+                       
+                    </div>
+                </div>
+                <!-- end modal views ------------------------------------------>
+        <div id="pushReceieved-view" data-role="modalview" data-model="window.APP.models.pushNotificationActionManager.pushNotificationModel"
+             data-modal="false"
+             style="display: none;" class="ecxModalView">
+            <div class="error-header ecxHeader" data-role="header" style="display: none;">
+                <div>
+
+                </div>
+            </div>
+
+            <div>
+                <div data-align="center" class="message" data-bind="text:Message"></div>
+                <input type="hidden" data-bind="value:TabId">
+                <input type="hidden" data-bind="value:ActionId">
+                <input type="hidden" data-bind="value:EntityTypeId">
+                <input type="hidden" data-bind="value:EntityId">
+                <div style="width:100%">
+
+                    <a data-role="button" id="btnCancel" data-align="left" style="width:40%;"
+                       data-click="window.APP.models.pushNotificationActionManager.onCancel">Cancel</a>
+                    <a data-role="button" id="window.APP.models.pushNotificationActionManager." style="float:right;width:40%"
+                       data-click="window.APP.models.pushNotificationActionManager.onGo">Go</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end modal views ------------------------------------------>
+
+</body>
+</html>
